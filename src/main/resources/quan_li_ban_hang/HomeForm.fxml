@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="854.6666666666666" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane layoutX="38.0" layoutY="42.0" prefHeight="131.0" prefWidth="777.0" stylesheets="@dashBoard.css">
+         <styleClass>
+            <String fx:value="shadow" />
+            <String fx:value="card2" />
+         </styleClass>
+         <children>
+            <Label alignment="CENTER" layoutX="8.0" layoutY="24.0" prefHeight="84.0" prefWidth="761.0" text="QUẢN LÍ BÁN HÀNG" textFill="#11688d">
+               <font>
+                  <Font size="48.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="38.0" layoutY="220.0" prefHeight="65.0" prefWidth="777.0" styleClass="card2" stylesheets="@dashBoard.css">
+         <children>
+            <Label alignment="CENTER" layoutX="14.0" layoutY="12.0" prefHeight="45.0" prefWidth="755.0" text="CÁC SẢN PHẨM PHỔ BIẾN" textFill="#11827a">
+               <font>
+                  <Font name="Arial" size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="38.0" layoutY="309.0" prefHeight="260.0" prefWidth="221.0" styleClass="card2" stylesheets="@dashBoard.css">
+         <children>
+            <ImageView fitHeight="236.0" fitWidth="200.0" layoutX="21.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@292px-ThC3A9p_C491C3A3_tC3B4i_thE1BABF_C491E1BAA5y_21.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="316.0" layoutY="309.0" prefHeight="260.0" prefWidth="221.0" styleClass="card2" stylesheets="@dashBoard.css">
+         <children>
+            <ImageView fitHeight="229.0" fitWidth="200.0" layoutX="11.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@b37b55d042d4950fe20247cc0f7b5d08.jpg" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="594.0" layoutY="309.0" prefHeight="260.0" prefWidth="221.0" styleClass="card2" stylesheets="@dashBoard.css">
+         <children>
+            <ImageView fitHeight="225.0" fitWidth="200.0" layoutX="19.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

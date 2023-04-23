@@ -1,0 +1,41 @@
+.card{
+    -fx-background-color: linear-gradient(to bottom right, #aaeceb, #00c5b6);
+}
+.card2{
+    -fx-background-color: linear-gradient(to bottom right, #aaeceb, #00c5b6);
+    -fx-background-radius: 10px;
+}
+.buttonTK{
+    -fx-background-color: #43c0ba;
+    -fx-background-radius: 5px;
+}
+.table-view{
+    -fx-border-color: linear-gradient(to bottom right, #aaeceb, #00c5b6);
+    -fx-border-radius: 5px;
+    -fx-padding: 0px;
+    -fx-border-width: 2px;
+    -fx-background-color: transparent;
+}
+.table-view .table-column{
+    -fx-alignment: center;
+}
+.table-view .column-header-background{
+    -fx-background-color: linear-gradient(to bottom right, #aaeceb, #00c5b6);
+}
+.table-view .column-header, .filter{
+    -fx-background-color: transparent;
+}
+.white{
+    -fx-background-radius: 10px;
+    -fx-background-color: #fff;
+}
+.shadow{
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.5),5,0,0,0);
+}
+
+.buttonSelect{
+    -fx-background-color: transparent;
+    -fx-cursor: hand;
+    -fx-font-size: 14px;
+    -fx-font-family: Arial;
+}

@@ -1,0 +1,7 @@
+.Icon{
+    -fx-background-image: url('Screenshot 2023-02-27 055314.png');
+    -fx-background-position: center;
+}
+.card{
+    -fx-background-color: linear-gradient(to bottom right, #aaeceb, #7decdc);
+}

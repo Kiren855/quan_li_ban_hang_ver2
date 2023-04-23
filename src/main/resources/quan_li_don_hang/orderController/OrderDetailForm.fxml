@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="854.6666666666666" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="quan_li_don_hang.orderController.OrderDetailController">
+   <children>
+      <AnchorPane fx:id="addOrder" prefHeight="600.0" prefWidth="854.6666666666666">
+         <children>
+            <AnchorPane layoutY="40.0" prefHeight="519.0" prefWidth="591.0" stylesheets="@../../quan_li_ban_hang/dashBoard.css" AnchorPane.bottomAnchor="40.66666666666663" AnchorPane.leftAnchor="24.0" AnchorPane.rightAnchor="239.33333333333326" AnchorPane.topAnchor="40.0">
+               <styleClass>
+                  <String fx:value="white" />
+                  <String fx:value="shadow" />
+               </styleClass>
+               <children>
+                  <Label alignment="CENTER" layoutX="12.0" layoutY="31.0" prefHeight="29.0" prefWidth="563.0" text="Thông tin đơn hàng" textFill="#26c2c7">
+                     <font>
+                        <Font name="Arial" size="18.0" />
+                     </font>
+                  </Label>
+                  <AnchorPane layoutX="14.0" layoutY="72.0" prefHeight="435.0" prefWidth="324.0" stylesheets="@dashBoard.css">
+                     <styleClass>
+                        <String fx:value="shadow" />
+                        <String fx:value="card2" />
+                     </styleClass>
+                     <children>
+                        <Label alignment="CENTER_RIGHT" layoutX="21.0" layoutY="207.0" prefHeight="24.0" prefWidth="81.0" text="Customer ID:" textFill="#146965" />
+                        <TextField fx:id="CustomerIDField" editable="false" layoutX="102.0" layoutY="206.0" prefHeight="25.0" prefWidth="179.0" />
+                        <Label alignment="CENTER_RIGHT" layoutX="37.0" layoutY="254.0" prefHeight="24.0" prefWidth="65.0" text="Name:" textFill="#146965" />
+                        <TextField fx:id="NameField" editable="false" layoutX="102.0" layoutY="253.0" prefHeight="25.0" prefWidth="179.0" />
+                        <Label alignment="CENTER_RIGHT" layoutX="37.0" layoutY="300.0" prefHeight="24.0" prefWidth="65.0" text="Email:" textFill="#146965" />
+                        <TextField fx:id="EmailField" editable="false" layoutX="102.0" layoutY="299.0" prefHeight="25.0" prefWidth="179.0" />
+                        <Label alignment="CENTER_RIGHT" layoutX="37.0" layoutY="348.0" prefHeight="24.0" prefWidth="65.0" text="Phone:" textFill="#146965" />
+                        <TextField fx:id="PhoneField" editable="false" layoutX="102.0" layoutY="347.0" prefHeight="25.0" prefWidth="179.0" />
+                        <Label alignment="CENTER_RIGHT" layoutX="37.0" layoutY="396.0" prefHeight="24.0" prefWidth="65.0" text="Address:" textFill="#146965" />
+                        <TextField fx:id="AddressField" editable="false" layoutX="102.0" layoutY="395.0" prefHeight="25.0" prefWidth="179.0" />
+                        <Label layoutX="130.0" layoutY="176.0" prefHeight="17.0" prefWidth="65.0" text="Customer" textFill="#0e6c6e">
+                           <font>
+                              <Font name="Arial" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER_RIGHT" layoutX="38.0" layoutY="50.0" prefHeight="24.0" prefWidth="65.0" text="Order ID:" textFill="#146965" />
+                        <TextField fx:id="OrderIDField" editable="false" layoutX="103.0" layoutY="49.0" prefHeight="25.0" prefWidth="179.0" />
+                        <Label alignment="CENTER_RIGHT" layoutX="40.0" layoutY="95.0" prefHeight="24.0" prefWidth="65.0" text="Order Date:" textFill="#146965" />
+                        <TextField fx:id="OrderDateField" editable="false" layoutX="105.0" layoutY="94.0" prefHeight="25.0" prefWidth="179.0" />
+                        <Label alignment="CENTER_RIGHT" layoutX="40.0" layoutY="142.0" prefHeight="24.0" prefWidth="65.0" text="Status:" textFill="#146965" />
+                        <TextField fx:id="OrderStatusField" editable="false" layoutX="105.0" layoutY="141.0" prefHeight="25.0" prefWidth="179.0" />
+                        <Label alignment="CENTER" layoutX="149.0" layoutY="20.0" prefHeight="17.0" prefWidth="56.0" text="Order" textFill="#155765" />
+                     </children>
+                  </AnchorPane>
+                  <TableView fx:id="listProduct" layoutX="375.0" layoutY="96.0" prefHeight="315.0" prefWidth="200.0">
+                     <columns>
+                        <TableColumn fx:id="Name" prefWidth="75.0" text="Name" />
+                        <TableColumn fx:id="Price" prefWidth="58.666656494140625" text="Price" />
+                        <TableColumn fx:id="Quantity" prefWidth="61.99993896484375" text="Quantity" />
+                     </columns>
+                  </TableView>
+                  <Label alignment="CENTER" layoutX="375.0" layoutY="72.0" prefHeight="24.0" prefWidth="200.0" text="Danh sách sản phẩm" textFill="#0abaa2">
+                     <font>
+                        <Font name="Arial" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER_RIGHT" layoutX="383.0" layoutY="437.0" prefHeight="29.0" prefWidth="81.0" text="Total Quantity:" textFill="#20aec0" />
+                  <Label fx:id="totalQuantityLabel" layoutX="475.0" layoutY="438.0" prefHeight="29.0" prefWidth="97.0" text="00">
+                     <font>
+                        <Font name="Arial" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER_RIGHT" layoutX="383.0" layoutY="467.0" prefHeight="29.0" prefWidth="81.0" text="Total Amount:" textFill="#16b8c7" />
+                  <Label fx:id="totalAmountLabel" layoutX="475.0" layoutY="468.0" prefHeight="29.0" prefWidth="97.0" text="00" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="644.0" layoutY="40.0" prefHeight="519.0" prefWidth="179.0" stylesheets="@../../quan_li_ban_hang/dashBoard.css" AnchorPane.bottomAnchor="40.66666666666663" AnchorPane.leftAnchor="645.0" AnchorPane.rightAnchor="30.333333333333286" AnchorPane.topAnchor="40.0">
+               <styleClass>
+                  <String fx:value="shadow" />
+                  <String fx:value="card2" />
+               </styleClass>
+               <children>
+                  <Button layoutX="37.0" layoutY="181.0" mnemonicParsing="false" onAction="#ConfirmHandle" prefHeight="25.0" prefWidth="111.0" text="Quay lại" textFill="#0a9a93">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

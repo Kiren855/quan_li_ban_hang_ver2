@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="854.66666666" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="quan_li_san_pham.productController.ProductController">
+   <children>
+      <AnchorPane fx:id="qlProduct" prefHeight="600.0" prefWidth="854.6666666666666">
+         <children>
+            <AnchorPane layoutX="24.0" layoutY="40.0" prefHeight="519.0" prefWidth="591.0" stylesheets="@../../quan_li_ban_hang/dashBoard.css">
+               <styleClass>
+                  <String fx:value="white" />
+                  <String fx:value="shadow" />
+               </styleClass>
+               <children>
+                  <TextField fx:id="searchProductField" layoutX="64.0" layoutY="23.0" prefHeight="31.0" prefWidth="273.0" promptText="Tìm kiếm bằng tên sản phẩm">
+                     <font>
+                        <Font name="Arial" size="14.0" />
+                     </font>
+                  </TextField>
+                  <Button layoutX="360.0" layoutY="21.0" mnemonicParsing="false" onAction="#searchProductHandle" prefHeight="35.0" prefWidth="111.0" text="Tìm kiếm" />
+                  <FontAwesomeIcon glyphName="SEARCH" layoutX="360.0" layoutY="47.0" size="2em" wrappingWidth="24.66668701171875" AnchorPane.rightAnchor="200.0" />
+                  <TableView fx:id="productTable" layoutX="7.0" layoutY="91.0" prefHeight="395.0" prefWidth="573.0" stylesheets="@../../quan_li_ban_hang/dashBoard.css">
+                     <columns>
+                        <TableColumn fx:id="productID" prefWidth="64.00003433227539" text="ID" />
+                        <TableColumn fx:id="productName" prefWidth="140.0000228881836" text="Name" />
+                        <TableColumn fx:id="productPrice" prefWidth="77.33338928222656" text="Price" />
+                        <TableColumn fx:id="productQuantity" prefWidth="73.3333740234375" text="Quantity" />
+                        <TableColumn fx:id="productNote" prefWidth="138.66659545898438" text="Note" />
+                        <TableColumn fx:id="productType" prefWidth="81.33331298828125" text="Type" />
+                     </columns>
+                  </TableView>
+                  <Button layoutX="521.0" layoutY="21.0" mnemonicParsing="false" onAction="#refreshTable" prefHeight="35.0" prefWidth="37.0" styleClass="buttonRefresh" stylesheets="@dashBoard.css" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="645.0" layoutY="40.0" prefHeight="519.0" prefWidth="179.0" stylesheets="@../../quan_li_ban_hang/dashBoard.css">
+               <styleClass>
+                  <String fx:value="shadow" />
+                  <String fx:value="card2" />
+               </styleClass>
+               <children>
+                  <Button layoutX="34.0" layoutY="94.0" mnemonicParsing="false" onAction="#addProductHandle" prefHeight="25.0" prefWidth="111.0" text="Thêm" AnchorPane.bottomAnchor="396.0" AnchorPane.leftAnchor="34.0" AnchorPane.rightAnchor="34.0" AnchorPane.topAnchor="94.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="34.0" layoutY="150.0" mnemonicParsing="false" onAction="#editProductHandle" prefHeight="25.0" prefWidth="111.0" text="Sửa" AnchorPane.bottomAnchor="338.0" AnchorPane.leftAnchor="34.0" AnchorPane.rightAnchor="34.0" AnchorPane.topAnchor="150.0">
+                     <font>
+                        <Font name="Arial" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="34.0" layoutY="204.0" mnemonicParsing="false" onAction="#deleteProductHandle" prefHeight="25.0" prefWidth="111.0" text="Xoá" AnchorPane.bottomAnchor="286.0" AnchorPane.leftAnchor="34.0" AnchorPane.rightAnchor="34.0" AnchorPane.topAnchor="204.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <FontAwesomeIcon glyphName="EDIT" layoutX="42.0" layoutY="175.0" size="2em" AnchorPane.bottomAnchor="340.90476163228357" AnchorPane.leftAnchor="42.0" AnchorPane.rightAnchor="113.33333333333334" AnchorPane.topAnchor="154.4285717010498" />
+                  <FontAwesomeIcon glyphName="PLUS" layoutX="45.0" layoutY="117.0" size="2em" AnchorPane.bottomAnchor="398.90476163228357" AnchorPane.leftAnchor="43.52381006876628" AnchorPane.rightAnchor="115.47618993123373" AnchorPane.topAnchor="96.4285717010498" />
+                  <FontAwesomeIcon glyphName="MINUS" layoutX="44.0" layoutY="228.0" size="2em" text="" AnchorPane.bottomAnchor="287.33333333333337" AnchorPane.leftAnchor="43.52381006876628" AnchorPane.rightAnchor="116.47618993123373" AnchorPane.topAnchor="208.0" />
+                  <Button layoutX="34.0" layoutY="260.0" mnemonicParsing="false" onAction="#detailProductHandle" prefHeight="25.0" prefWidth="111.0" text="Chi Tiết" AnchorPane.bottomAnchor="230.0" AnchorPane.leftAnchor="34.0" AnchorPane.rightAnchor="34.0" AnchorPane.topAnchor="260.0">
+                     <font>
+                        <Font name="Arial" size="14.0" />
+                     </font>
+                  </Button>
+                  <FontAwesomeIcon glyphName="EXCLAMATION" layoutX="50.0" layoutY="283.0" size="2em" AnchorPane.bottomAnchor="232.90476163228357" AnchorPane.leftAnchor="43.52381006876628" AnchorPane.rightAnchor="127.23809496561688" AnchorPane.topAnchor="262.4285717010498" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="addProduct" prefHeight="600.0" prefWidth="854.66666666" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <fx:include source="ProductAddForm.fxml" />
+      </AnchorPane>
+      <AnchorPane fx:id="editProduct" prefHeight="600.0" prefWidth="854.66666666" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <fx:include source="ProductEditForm.fxml" />
+      </AnchorPane>
+      <AnchorPane fx:id="detailProduct" prefHeight="600.0" prefWidth="854.66666666" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <fx:include source="ProductDetailForm.fxml" />
+      </AnchorPane>
+   </children>
+</AnchorPane>
