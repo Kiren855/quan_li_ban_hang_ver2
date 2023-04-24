@@ -35,7 +35,7 @@ public class Login extends Application {
     public void Logout(Stage stage){
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
         alert.setTitle("Đăng Xuất");
-        alert.setHeaderText("Bạn có muốn Cút ra khỏi đây!");
+        alert.setHeaderText("Bạn có muốn thoát ra khỏi đây!");
 
         if(alert.showAndWait().get() == ButtonType.OK){
             System.out.println("Đăng xuất thành công!");

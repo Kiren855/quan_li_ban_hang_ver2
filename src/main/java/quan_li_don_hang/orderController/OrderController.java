@@ -102,6 +102,7 @@ public class OrderController implements Initializable {
         String key = searchOrderField.getText().toLowerCase();
         ObservableList<Orders> tmp = ordersList.filtered(orders ->
                 orders.getCustomer().getCustomerName().toLowerCase().contains(key)
+                || orders.getCustomer().getCustomerID().toLowerCase().contains(key)
         );
         orderTable.setItems(tmp);
         orderTable.refresh();

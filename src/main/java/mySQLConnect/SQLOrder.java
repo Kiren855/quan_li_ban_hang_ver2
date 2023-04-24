@@ -239,41 +239,7 @@ public class SQLOrder {
             }
         }
     }
-    private static void deleteProduct(String orderID){
-        Connection connection = null;
-        PreparedStatement statement1 = null;
-        PreparedStatement statement2 = null;
-        PreparedStatement statement3 = null;
 
-        try{
-            connection = DBConnect();
-
-            String sql1 = "set foreign_key_checks = 0";
-            statement1 = connection.prepareStatement(sql1);
-            statement1.executeUpdate();
-
-            String sql2 = "delete from orderdetails where order_id = ?";
-            statement2 = connection.prepareStatement(sql2);
-            statement2.setString(1,orderID);
-            statement2.executeUpdate();
-
-            String sql3 = "set foreign_key_checks = 1";
-            statement3 = connection.prepareStatement(sql3);
-            statement3.executeUpdate();
-
-        }catch (SQLException e){
-            e.fillInStackTrace();
-        }finally {
-            try{
-                if(connection != null) connection.close();
-                if(statement1 != null) statement1.close();
-                if(statement2 != null) statement2.close();
-                if(statement3 != null) statement3.close();
-            }catch (SQLException e){
-                e.fillInStackTrace();
-            }
-        }
-    }
     public static void updateOrder(Orders orders, String customerID){
 
         Connection connection = null;
